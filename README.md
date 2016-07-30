@@ -1,5 +1,5 @@
 # TCAS-II-00594-2016
-FIR filter implementions for manuscript TCAS-II-00594-2016
+FIR filter implementations for manuscript TCAS-II-00594-2016
 
 
 Examples of a 90-tap symmetric FIR filter:
