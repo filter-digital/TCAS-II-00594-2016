@@ -15,32 +15,30 @@ end entity top;
 architecture rtl of top is
 
    constant datain_bitsize  : natural := 15;
-	constant dataout_bitsize : natural := 41;
+   constant dataout_bitsize : natural := 41;
 
-	constant signedzero      : signed(datain_bitsize-1 downto 0)  := to_signed(0,datain_bitsize);
+   constant signedzero      : signed(datain_bitsize-1 downto 0)  := to_signed(0,datain_bitsize);
    constant signedmax       : signed(datain_bitsize-1 downto 0)  := to_signed(2**(datain_bitsize-1)-1,datain_bitsize);
 
-   signal msb           : std_ulogic := '0';
-   signal clk           : std_ulogic; 
-   
-   signal datain        : signed(datain_bitsize-1  downto 0) := to_signed(0,datain_bitsize);
-   signal dataout       : signed(dataout_bitsize-1 downto 0) := to_signed(0,dataout_bitsize);
-   
-   signal pulse         : std_ulogic_vector(1 downto 0)      := "01";
+   signal msb               : std_ulogic := '0';
+   signal clk               : std_ulogic; 
+   						    
+   signal datain            : signed(datain_bitsize-1  downto 0) := to_signed(0,datain_bitsize);
+   signal dataout           : signed(dataout_bitsize-1 downto 0) := to_signed(0,dataout_bitsize);
+   						    
+   signal pulse             : std_ulogic_vector(1 downto 0)      := "01";
 
 begin
 
-	clk        <= sysclk;
-	fpga_awake <= msb;
+   clk        <= sysclk;
+   fpga_awake <= msb;
 
-	fir_altera_wrapper_inst : entity work.fir_altera_wrapper
-   generic map
-   (
+   fir_altera_wrapper_inst : entity work.fir_altera_wrapper
+   generic map (
       datawidth     => datain_bitsize,
       fullprecision => dataout_bitsize
    )
-   port map
-   (
+   port map (
       clk     => clk,
       datain  => datain,
       dataout => dataout
@@ -63,8 +61,7 @@ begin
             datain <= signedmax;
          else
             datain <= signedzero;
-         end if;
-         
+         end if;         
       end if;
    end process;
 
