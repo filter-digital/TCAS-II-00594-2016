@@ -57,7 +57,8 @@ Hard Multiplier Threshold:  -1
 
 2)
 - generate project with "generate_project.tcl" script in folder "./Xilinx/project/"
-- or start the batch file "make_project.bat" with windows (which will call the tcl script)
+- or start the batch file* "make_project.bat" with windows (which will call the tcl script)
+*change path to xilinx vivado installation in batch file! (default is "C:\Xilinx\Vivado\2016.1\...")
 
 Settings for the Xilinx FIR Compiler 7.2
 ----------------------------------------
