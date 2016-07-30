@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="FIR_90TAPS_sim/dspba_library_package.vhd" type="VHDL" />
+ <file path="FIR_90TAPS_sim/dspba_library.vhd" type="VHDL" />
+ <file path="FIR_90TAPS_sim/auk_dspip_math_pkg_hpfir.vhd" type="VHDL" />
+ <file path="FIR_90TAPS_sim/auk_dspip_lib_pkg_hpfir.vhd" type="VHDL" />
+ <file
+   path="FIR_90TAPS_sim/auk_dspip_avalon_streaming_controller_hpfir.vhd"
+   type="VHDL" />
+ <file
+   path="FIR_90TAPS_sim/auk_dspip_avalon_streaming_sink_hpfir.vhd"
+   type="VHDL" />
+ <file
+   path="FIR_90TAPS_sim/auk_dspip_avalon_streaming_source_hpfir.vhd"
+   type="VHDL" />
+ <file path="FIR_90TAPS_sim/auk_dspip_roundsat_hpfir.vhd" type="VHDL" />
+ <file path="FIR_90TAPS_sim/altera_avalon_sc_fifo.v" type="VERILOG" />
+ <file path="FIR_90TAPS_sim/FIR_90TAPS_rtl.vhd" type="VHDL" />
+ <file path="FIR_90TAPS_sim/FIR_90TAPS_ast.vhd" type="VHDL" />
+ <file path="FIR_90TAPS_sim/FIR_90TAPS.vhd" type="VHDL" />
+ <file path="FIR_90TAPS_sim/FIR_90TAPS.sdc" type="SDC" />
+ <file path="FIR_90TAPS_sim/FIR_90TAPS_nativelink.tcl" type="OTHER" />
+ <file path="FIR_90TAPS_sim/FIR_90TAPS_msim.tcl" type="OTHER" />
+ <file path="FIR_90TAPS_sim/FIR_90TAPS_mlab.m" type="OTHER" />
+ <file path="FIR_90TAPS_sim/FIR_90TAPS_model.m" type="OTHER" />
+ <file path="FIR_90TAPS_sim/FIR_90TAPS_coef_int.txt" type="OTHER" />
+ <file path="FIR_90TAPS_sim/FIR_90TAPS_input.txt" type="OTHER" />
+ <file path="FIR_90TAPS_sim/FIR_90TAPS_param.txt" type="OTHER" />
+ <topLevel name="FIR_90TAPS" />
+ <deviceFamily name="cyclonev" />
+</simPackage>
