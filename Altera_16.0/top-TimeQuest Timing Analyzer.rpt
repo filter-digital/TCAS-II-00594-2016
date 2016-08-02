@@ -1,0 +1,806 @@
+TimeQuest Timing Analyzer report for top
+Tue Aug 02 16:20:58 2016
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Legal Notice
+  3. TimeQuest Timing Analyzer Summary
+  4. Parallel Compilation
+  5. SDC File List
+  6. Clocks
+  7. Slow 1100mV 85C Model Fmax Summary
+  8. Timing Closure Recommendations
+  9. Slow 1100mV 85C Model Setup Summary
+ 10. Slow 1100mV 85C Model Hold Summary
+ 11. Slow 1100mV 85C Model Recovery Summary
+ 12. Slow 1100mV 85C Model Removal Summary
+ 13. Slow 1100mV 85C Model Minimum Pulse Width Summary
+ 14. Slow 1100mV 85C Model Metastability Summary
+ 15. Slow 1100mV 0C Model Fmax Summary
+ 16. Slow 1100mV 0C Model Setup Summary
+ 17. Slow 1100mV 0C Model Hold Summary
+ 18. Slow 1100mV 0C Model Recovery Summary
+ 19. Slow 1100mV 0C Model Removal Summary
+ 20. Slow 1100mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1100mV 0C Model Metastability Summary
+ 22. Fast 1100mV 85C Model Setup Summary
+ 23. Fast 1100mV 85C Model Hold Summary
+ 24. Fast 1100mV 85C Model Recovery Summary
+ 25. Fast 1100mV 85C Model Removal Summary
+ 26. Fast 1100mV 85C Model Minimum Pulse Width Summary
+ 27. Fast 1100mV 85C Model Metastability Summary
+ 28. Fast 1100mV 0C Model Setup Summary
+ 29. Fast 1100mV 0C Model Hold Summary
+ 30. Fast 1100mV 0C Model Recovery Summary
+ 31. Fast 1100mV 0C Model Removal Summary
+ 32. Fast 1100mV 0C Model Minimum Pulse Width Summary
+ 33. Fast 1100mV 0C Model Metastability Summary
+ 34. Multicorner Timing Analysis Summary
+ 35. Board Trace Model Assignments
+ 36. Input Transition Times
+ 37. Signal Integrity Metrics (Slow 1100mv 0c Model)
+ 38. Signal Integrity Metrics (Slow 1100mv 85c Model)
+ 39. Signal Integrity Metrics (Fast 1100mv 0c Model)
+ 40. Signal Integrity Metrics (Fast 1100mv 85c Model)
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Recovery Transfers
+ 44. Removal Transfers
+ 45. Report TCCS
+ 46. Report RSKM
+ 47. Unconstrained Paths Summary
+ 48. Clock Status Summary
+ 49. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                           ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
+; Timing Analyzer       ; TimeQuest                                           ;
+; Revision Name         ; top                                                 ;
+; Device Family         ; Cyclone V                                           ;
+; Device Name           ; 5CEFA5F23C6                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; timing.sdc    ; OK     ; Tue Aug 02 16:20:02 2016 ;
++---------------+--------+--------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+; sysclk     ; Base ; 10.000 ; 100.0 MHz ; 0.000 ; 5.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sysclk } ;
++------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
+
+
++--------------------------------------------------+
+; Slow 1100mV 85C Model Fmax Summary               ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 147.04 MHz ; 147.04 MHz      ; sysclk     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1100mV 85C Model Setup Summary ;
++--------+-------+--------------------+
+; Clock  ; Slack ; End Point TNS      ;
++--------+-------+--------------------+
+; sysclk ; 3.199 ; 0.000              ;
++--------+-------+--------------------+
+
+
++------------------------------------+
+; Slow 1100mV 85C Model Hold Summary ;
++--------+-------+-------------------+
+; Clock  ; Slack ; End Point TNS     ;
++--------+-------+-------------------+
+; sysclk ; 0.168 ; 0.000             ;
++--------+-------+-------------------+
+
+
++----------------------------------------+
+; Slow 1100mV 85C Model Recovery Summary ;
++--------+-------+-----------------------+
+; Clock  ; Slack ; End Point TNS         ;
++--------+-------+-----------------------+
+; sysclk ; 4.454 ; 0.000                 ;
++--------+-------+-----------------------+
+
+
++---------------------------------------+
+; Slow 1100mV 85C Model Removal Summary ;
++--------+-------+----------------------+
+; Clock  ; Slack ; End Point TNS        ;
++--------+-------+----------------------+
+; sysclk ; 2.266 ; 0.000                ;
++--------+-------+----------------------+
+
+
++---------------------------------------------------+
+; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
++--------+-------+----------------------------------+
+; Clock  ; Slack ; End Point TNS                    ;
++--------+-------+----------------------------------+
+; sysclk ; 4.057 ; 0.000                            ;
++--------+-------+----------------------------------+
+
+
+-----------------------------------------------
+; Slow 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 1
+Shortest Synchronizer Chain: 3 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 24.692 ns
+
+
+
+
++--------------------------------------------------+
+; Slow 1100mV 0C Model Fmax Summary                ;
++------------+-----------------+------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
++------------+-----------------+------------+------+
+; 149.05 MHz ; 149.05 MHz      ; sysclk     ;      ;
++------------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1100mV 0C Model Setup Summary ;
++--------+-------+-------------------+
+; Clock  ; Slack ; End Point TNS     ;
++--------+-------+-------------------+
+; sysclk ; 3.291 ; 0.000             ;
++--------+-------+-------------------+
+
+
++-----------------------------------+
+; Slow 1100mV 0C Model Hold Summary ;
++--------+-------+------------------+
+; Clock  ; Slack ; End Point TNS    ;
++--------+-------+------------------+
+; sysclk ; 0.052 ; 0.000            ;
++--------+-------+------------------+
+
+
++---------------------------------------+
+; Slow 1100mV 0C Model Recovery Summary ;
++--------+-------+----------------------+
+; Clock  ; Slack ; End Point TNS        ;
++--------+-------+----------------------+
+; sysclk ; 4.500 ; 0.000                ;
++--------+-------+----------------------+
+
+
++--------------------------------------+
+; Slow 1100mV 0C Model Removal Summary ;
++--------+-------+---------------------+
+; Clock  ; Slack ; End Point TNS       ;
++--------+-------+---------------------+
+; sysclk ; 2.231 ; 0.000               ;
++--------+-------+---------------------+
+
+
++--------------------------------------------------+
+; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
++--------+-------+---------------------------------+
+; Clock  ; Slack ; End Point TNS                   ;
++--------+-------+---------------------------------+
+; sysclk ; 3.984 ; 0.000                           ;
++--------+-------+---------------------------------+
+
+
+----------------------------------------------
+; Slow 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 1
+Shortest Synchronizer Chain: 3 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 24.952 ns
+
+
+
+
++-------------------------------------+
+; Fast 1100mV 85C Model Setup Summary ;
++--------+-------+--------------------+
+; Clock  ; Slack ; End Point TNS      ;
++--------+-------+--------------------+
+; sysclk ; 5.880 ; 0.000              ;
++--------+-------+--------------------+
+
+
++------------------------------------+
+; Fast 1100mV 85C Model Hold Summary ;
++--------+-------+-------------------+
+; Clock  ; Slack ; End Point TNS     ;
++--------+-------+-------------------+
+; sysclk ; 0.108 ; 0.000             ;
++--------+-------+-------------------+
+
+
++----------------------------------------+
+; Fast 1100mV 85C Model Recovery Summary ;
++--------+-------+-----------------------+
+; Clock  ; Slack ; End Point TNS         ;
++--------+-------+-----------------------+
+; sysclk ; 7.002 ; 0.000                 ;
++--------+-------+-----------------------+
+
+
++---------------------------------------+
+; Fast 1100mV 85C Model Removal Summary ;
++--------+-------+----------------------+
+; Clock  ; Slack ; End Point TNS        ;
++--------+-------+----------------------+
+; sysclk ; 1.371 ; 0.000                ;
++--------+-------+----------------------+
+
+
++---------------------------------------------------+
+; Fast 1100mV 85C Model Minimum Pulse Width Summary ;
++--------+-------+----------------------------------+
+; Clock  ; Slack ; End Point TNS                    ;
++--------+-------+----------------------------------+
+; sysclk ; 3.999 ; 0.000                            ;
++--------+-------+----------------------------------+
+
+
+-----------------------------------------------
+; Fast 1100mV 85C Model Metastability Summary ;
+-----------------------------------------------
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 1
+Shortest Synchronizer Chain: 3 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 26.513 ns
+
+
+
+
++------------------------------------+
+; Fast 1100mV 0C Model Setup Summary ;
++--------+-------+-------------------+
+; Clock  ; Slack ; End Point TNS     ;
++--------+-------+-------------------+
+; sysclk ; 6.101 ; 0.000             ;
++--------+-------+-------------------+
+
+
++-----------------------------------+
+; Fast 1100mV 0C Model Hold Summary ;
++--------+-------+------------------+
+; Clock  ; Slack ; End Point TNS    ;
++--------+-------+------------------+
+; sysclk ; 0.045 ; 0.000            ;
++--------+-------+------------------+
+
+
++---------------------------------------+
+; Fast 1100mV 0C Model Recovery Summary ;
++--------+-------+----------------------+
+; Clock  ; Slack ; End Point TNS        ;
++--------+-------+----------------------+
+; sysclk ; 7.088 ; 0.000                ;
++--------+-------+----------------------+
+
+
++--------------------------------------+
+; Fast 1100mV 0C Model Removal Summary ;
++--------+-------+---------------------+
+; Clock  ; Slack ; End Point TNS       ;
++--------+-------+---------------------+
+; sysclk ; 1.268 ; 0.000               ;
++--------+-------+---------------------+
+
+
++--------------------------------------------------+
+; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
++--------+-------+---------------------------------+
+; Clock  ; Slack ; End Point TNS                   ;
++--------+-------+---------------------------------+
+; sysclk ; 3.994 ; 0.000                           ;
++--------+-------+---------------------------------+
+
+
+----------------------------------------------
+; Fast 1100mV 0C Model Metastability Summary ;
+----------------------------------------------
+The design MTBF is not calculated because there are no specified synchronizers in the design.
+Number of Synchronizer Chains Found: 1
+Shortest Synchronizer Chain: 3 Registers
+Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+Worst Case Available Settling Time: 26.930 ns
+
+
+
+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 3.199 ; 0.045 ; 4.454    ; 1.268   ; 3.984               ;
+;  sysclk          ; 3.199 ; 0.045 ; 4.454    ; 1.268   ; 3.984               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  sysclk          ; 0.000 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                 ;
++------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin        ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; fpga_awake ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++-----------------------------------------------------------+
+; Input Transition Times                                    ;
++--------+--------------+-----------------+-----------------+
+; Pin    ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++--------+--------------+-----------------+-----------------+
+; sysclk ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++--------+--------------+-----------------+-----------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1100mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1100mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
++------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sysclk     ; sysclk   ; 28010    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sysclk     ; sysclk   ; 28010    ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Recovery Transfers                                                ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sysclk     ; sysclk   ; 9123     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Removal Transfers                                                 ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; sysclk     ; sysclk   ; 9123     ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 0     ; 0    ;
+; Unconstrained Input Port Paths  ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 0     ; 0    ;
+; Unconstrained Output Port Paths ; 0     ; 0    ;
++---------------------------------+-------+------+
+
+
++--------------------------------------+
+; Clock Status Summary                 ;
++--------+--------+------+-------------+
+; Target ; Clock  ; Type ; Status      ;
++--------+--------+------+-------------+
+; sysclk ; sysclk ; Base ; Constrained ;
++--------+--------+------+-------------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime TimeQuest Timing Analyzer
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+    Info: Processing started: Tue Aug 02 16:19:59 2016
+Info: Command: quartus_sta fir_90taps -c top
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'timing.sdc'
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama0~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama10~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama11~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama12~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama13~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama14~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama15~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama16~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama16~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama17~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama17~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama18~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama18~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama19~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama19~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama1~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama20~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama20~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama21~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama21~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama22~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama22~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama23~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama23~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama24~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama24~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama25~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama25~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama26~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama26~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama27~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama27~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama28~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama28~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama29~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama29~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama2~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama3~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama4~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama5~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama6~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama7~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~MEMORYREGOUT
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1100mV 85C Model
+Info (332146): Worst-case setup slack is 3.199
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.199               0.000 sysclk 
+Info (332146): Worst-case hold slack is 0.168
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.168               0.000 sysclk 
+Info (332146): Worst-case recovery slack is 4.454
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.454               0.000 sysclk 
+Info (332146): Worst-case removal slack is 2.266
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.266               0.000 sysclk 
+Info (332146): Worst-case minimum pulse width slack is 4.057
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.057               0.000 sysclk 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 1
+    Info (332114): Shortest Synchronizer Chain: 3 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 24.692 ns
+    Info (332114): 
+Info: Analyzing Slow 1100mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama0~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama10~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama11~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama12~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama13~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama14~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama15~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama16~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama16~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama17~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama17~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama18~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama18~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama19~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama19~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama1~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama20~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama20~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama21~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama21~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama22~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama22~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama23~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama23~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama24~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama24~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama25~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama25~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama26~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama26~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama27~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama27~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama28~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama28~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama29~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama29~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama2~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama3~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama4~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama5~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama6~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama7~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~MEMORYREGOUT
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 3.291
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.291               0.000 sysclk 
+Info (332146): Worst-case hold slack is 0.052
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.052               0.000 sysclk 
+Info (332146): Worst-case recovery slack is 4.500
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     4.500               0.000 sysclk 
+Info (332146): Worst-case removal slack is 2.231
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     2.231               0.000 sysclk 
+Info (332146): Worst-case minimum pulse width slack is 3.984
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.984               0.000 sysclk 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 1
+    Info (332114): Shortest Synchronizer Chain: 3 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 24.952 ns
+    Info (332114): 
+Info: Analyzing Fast 1100mV 85C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama0~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama10~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama11~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama12~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama13~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama14~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama15~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama16~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama16~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama17~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama17~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama18~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama18~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama19~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama19~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama1~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama20~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama20~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama21~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama21~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama22~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama22~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama23~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama23~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama24~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama24~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama25~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama25~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama26~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama26~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama27~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama27~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama28~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama28~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama29~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama29~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama2~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama3~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama4~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama5~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama6~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama7~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~MEMORYREGOUT
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 5.880
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     5.880               0.000 sysclk 
+Info (332146): Worst-case hold slack is 0.108
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.108               0.000 sysclk 
+Info (332146): Worst-case recovery slack is 7.002
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.002               0.000 sysclk 
+Info (332146): Worst-case removal slack is 1.371
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.371               0.000 sysclk 
+Info (332146): Worst-case minimum pulse width slack is 3.999
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.999               0.000 sysclk 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 1
+    Info (332114): Shortest Synchronizer Chain: 3 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 26.513 ns
+    Info (332114): 
+Info: Analyzing Fast 1100mV 0C Model
+Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama0~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama0~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama10~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama10~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama11~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama11~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama12~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama12~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama13~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama13~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama14~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama14~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama15~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama15~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama16~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama16~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama17~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama17~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama18~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama18~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama19~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama19~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama1~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama1~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama20~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama20~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama21~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama21~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama22~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama22~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama23~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama23~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama24~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama24~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama25~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama25~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama26~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama26~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama27~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama27~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama28~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama28~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama29~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama29~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama2~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama2~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama3~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama3~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama4~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama4~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama5~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama5~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama6~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama6~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama7~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama7~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~MEMORYREGOUT
+    Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~MEMORYREGOUT
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
+Info (332146): Worst-case setup slack is 6.101
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     6.101               0.000 sysclk 
+Info (332146): Worst-case hold slack is 0.045
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.045               0.000 sysclk 
+Info (332146): Worst-case recovery slack is 7.088
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     7.088               0.000 sysclk 
+Info (332146): Worst-case removal slack is 1.268
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     1.268               0.000 sysclk 
+Info (332146): Worst-case minimum pulse width slack is 3.994
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     3.994               0.000 sysclk 
+Info (332114): Report Metastability: Found 1 synchronizer chains.
+    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
+    Info (332114): Number of Synchronizer Chains Found: 1
+    Info (332114): Shortest Synchronizer Chain: 3 Registers
+    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
+    Info (332114): Worst Case Available Settling Time: 26.930 ns
+    Info (332114): 
+Info (332101): Design is fully constrained for setup requirements
+Info (332101): Design is fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 1528 megabytes
+    Info: Processing ended: Tue Aug 02 16:20:18 2016
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:19
+
+
