@@ -2,17 +2,22 @@
 FIR filter implementations for manuscript TCAS-II-00594-2016
 
 Examples of a 90-tap symmetric FIR filter:
-	1) Implemented by Altera's FIR Compiler v15.1
+	1a) Implemented by Altera's FIR Compiler v15.1
+	1b) Implemented by Altera's FIR Compiler v16.0
 	2) Implemented by Xilinx's FIR Compiler v7.2
 
 ********************************************************************************
 
-1)
+1a)
 - Open "fir_90taps.qpf" in folder "./Altera/project/" with Altera Quartus Prime 15.1
 - for simulation run script "top_run.do" in "./Altera/project/simulation/modelsim/" with Modelsim-Altera version  (tested with 10.4b)
 
-Settings for the Altera FIR Compiler v15.1
-------------------------------------------
+1b)
+- Open "fir_90taps.qpf" in folder "./Altera_16.0/project/" with Altera Quartus Prime 16.0
+- for simulation run script "top_run.do" in "./Altera/project/simulation/modelsim/" with Modelsim-Altera version  (tested with 10.4d)
+
+Settings for the Altera FIR Compiler (same for all versions)
+------------------------------------------------------------
 
 Filter Settings:
 Filter Type:                Single Rate
