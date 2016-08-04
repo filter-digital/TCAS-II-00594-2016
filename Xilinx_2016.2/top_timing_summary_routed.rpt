@@ -1,0 +1,1297 @@
+Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2016.2 (win64) Build 1577090 Thu Jun  2 16:32:40 MDT 2016
+| Date         : Thu Aug 04 20:37:22 2016
+| Host         : fwfi46 running 64-bit Service Pack 1  (build 7601)
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file top_timing_summary_routed.rpt -rpx top_timing_summary_routed.rpx
+| Design       : top
+| Device       : 7a35t-csg324
+| Speed File   : -3  PRODUCTION 1.14 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  false
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There is 1 port with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.010        0.000                      0                21483        0.055        0.000                      0                21483        0.380        0.000                       0                  8334  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock     Waveform(ns)         Period(ns)      Frequency(MHz)
+-----     ------------         ----------      --------------
+sysclk_p  {0.000 1.150}        2.300           434.783         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sysclk_p            0.010        0.000                      0                21483        0.055        0.000                      0                21483        0.380        0.000                       0                  8334  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sysclk_p
+  To Clock:  sysclk_p
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.010ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.055ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        0.380ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.010ns  (required time - arrival time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/CE
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.300ns  (sysclk_p rise@2.300ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        2.043ns  (logic 0.341ns (16.691%)  route 1.702ns (83.309%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.062ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.434ns = ( 5.734 - 2.300 ) 
+    Source Clock Delay      (SCD):    3.623ns
+    Clock Pessimism Removal (CPR):    0.126ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.800     0.800 r  clkin_buf/O
+                         net (fo=1, routed)           1.502     2.302    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     2.379 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.244     3.623    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/aclk
+    SLICE_X13Y47         FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y47         FDRE (Prop_fdre_C_Q)         0.341     3.964 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/Q
+                         net (fo=1381, routed)        1.702     5.666    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].g_data_buff.i_data_buf/g_buff.i_buff/p_6_out[0]
+    SLICE_X3Y86          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      2.300     2.300 r  
+    T14                                               0.000     2.300 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     2.300    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.759     3.059 r  clkin_buf/O
+                         net (fo=1, routed)           1.421     4.480    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.073     4.553 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.181     5.734    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X3Y86          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/C
+                         clock pessimism              0.126     5.861    
+                         clock uncertainty           -0.035     5.826    
+    SLICE_X3Y86          FDRE (Setup_fdre_C_CE)      -0.150     5.676    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]
+  -------------------------------------------------------------------
+                         required time                          5.676    
+                         arrival time                          -5.666    
+  -------------------------------------------------------------------
+                         slack                                  0.010    
+
+Slack (MET) :             0.040ns  (required time - arrival time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][9]__0/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][9]_srl3/D
+                            (rising edge-triggered cell SRL16E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.300ns  (sysclk_p rise@2.300ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        1.917ns  (logic 0.393ns (20.501%)  route 1.524ns (79.499%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.251ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.373ns = ( 5.673 - 2.300 ) 
+    Source Clock Delay      (SCD):    3.757ns
+    Clock Pessimism Removal (CPR):    0.132ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.800     0.800 r  clkin_buf/O
+                         net (fo=1, routed)           1.502     2.302    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     2.379 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.377     3.757    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/aclk
+    SLICE_X14Y101        FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][9]__0/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y101        FDRE (Prop_fdre_C_Q)         0.393     4.150 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][9]__0/Q
+                         net (fo=1, routed)           1.524     5.674    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][9]__0
+    SLICE_X30Y53         SRL16E                                       r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][9]_srl3/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      2.300     2.300 r  
+    T14                                               0.000     2.300 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     2.300    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.759     3.059 r  clkin_buf/O
+                         net (fo=1, routed)           1.421     4.480    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.073     4.553 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.120     5.673    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/aclk
+    SLICE_X30Y53         SRL16E                                       r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][9]_srl3/CLK
+                         clock pessimism              0.132     5.806    
+                         clock uncertainty           -0.035     5.771    
+    SLICE_X30Y53         SRL16E (Setup_srl16e_CLK_D)
+                                                     -0.057     5.714    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][9]_srl3
+  -------------------------------------------------------------------
+                         required time                          5.714    
+                         arrival time                          -5.674    
+  -------------------------------------------------------------------
+                         slack                                  0.040    
+
+Slack (MET) :             0.060ns  (required time - arrival time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][8]__0/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][8]_srl3/D
+                            (rising edge-triggered cell SRL16E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.300ns  (sysclk_p rise@2.300ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        1.902ns  (logic 0.393ns (20.667%)  route 1.509ns (79.333%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.251ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.373ns = ( 5.673 - 2.300 ) 
+    Source Clock Delay      (SCD):    3.757ns
+    Clock Pessimism Removal (CPR):    0.132ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.800     0.800 r  clkin_buf/O
+                         net (fo=1, routed)           1.502     2.302    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     2.379 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.377     3.757    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/aclk
+    SLICE_X14Y101        FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][8]__0/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y101        FDRE (Prop_fdre_C_Q)         0.393     4.150 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][8]__0/Q
+                         net (fo=1, routed)           1.509     5.658    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][8]__0
+    SLICE_X30Y53         SRL16E                                       r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][8]_srl3/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      2.300     2.300 r  
+    T14                                               0.000     2.300 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     2.300    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.759     3.059 r  clkin_buf/O
+                         net (fo=1, routed)           1.421     4.480    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.073     4.553 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.120     5.673    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/aclk
+    SLICE_X30Y53         SRL16E                                       r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][8]_srl3/CLK
+                         clock pessimism              0.132     5.806    
+                         clock uncertainty           -0.035     5.771    
+    SLICE_X30Y53         SRL16E (Setup_srl16e_CLK_D)
+                                                     -0.052     5.719    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][8]_srl3
+  -------------------------------------------------------------------
+                         required time                          5.719    
+                         arrival time                          -5.658    
+  -------------------------------------------------------------------
+                         slack                                  0.060    
+
+Slack (MET) :             0.066ns  (required time - arrival time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[48].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[40][10]__0/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[48].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/D[10]
+                            (rising edge-triggered cell DSP48E1 clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.300ns  (sysclk_p rise@2.300ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        1.914ns  (logic 0.361ns (18.863%)  route 1.553ns (81.137%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.065ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.597ns = ( 5.897 - 2.300 ) 
+    Source Clock Delay      (SCD):    3.664ns
+    Clock Pessimism Removal (CPR):    0.132ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.800     0.800 r  clkin_buf/O
+                         net (fo=1, routed)           1.502     2.302    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     2.379 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.285     3.664    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[48].i_data_casc_dly/aclk
+    SLICE_X2Y59          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[48].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[40][10]__0/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y59          FDRE (Prop_fdre_C_Q)         0.361     4.025 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[48].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[40][10]__0/Q
+                         net (fo=1, routed)           1.553     5.578    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[48].i_madd/i_addsub_mult_add/D[10]
+    DSP48_X0Y41          DSP48E1                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[48].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/D[10]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      2.300     2.300 r  
+    T14                                               0.000     2.300 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     2.300    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.759     3.059 r  clkin_buf/O
+                         net (fo=1, routed)           1.421     4.480    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.073     4.553 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.344     5.897    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[48].i_madd/i_addsub_mult_add/aclk
+    DSP48_X0Y41          DSP48E1                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[48].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+                         clock pessimism              0.132     6.030    
+                         clock uncertainty           -0.035     5.994    
+    DSP48_X0Y41          DSP48E1 (Setup_dsp48e1_CLK_D[10])
+                                                     -0.350     5.644    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[48].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1
+  -------------------------------------------------------------------
+                         required time                          5.644    
+                         arrival time                          -5.578    
+  -------------------------------------------------------------------
+                         slack                                  0.066    
+
+Slack (MET) :             0.074ns  (required time - arrival time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[50].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[38][8]__0/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[50].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/D[8]
+                            (rising edge-triggered cell DSP48E1 clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.300ns  (sysclk_p rise@2.300ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        1.815ns  (logic 0.361ns (19.891%)  route 1.454ns (80.109%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.026ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.454ns = ( 5.754 - 2.300 ) 
+    Source Clock Delay      (SCD):    3.666ns
+    Clock Pessimism Removal (CPR):    0.186ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.800     0.800 r  clkin_buf/O
+                         net (fo=1, routed)           1.502     2.302    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     2.379 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.287     3.666    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[50].i_data_casc_dly/aclk
+    SLICE_X2Y55          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[50].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[38][8]__0/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y55          FDRE (Prop_fdre_C_Q)         0.361     4.027 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[50].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[38][8]__0/Q
+                         net (fo=1, routed)           1.454     5.481    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[50].i_madd/i_addsub_mult_add/D[8]
+    DSP48_X0Y39          DSP48E1                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[50].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/D[8]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      2.300     2.300 r  
+    T14                                               0.000     2.300 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     2.300    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.759     3.059 r  clkin_buf/O
+                         net (fo=1, routed)           1.421     4.480    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.073     4.553 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.201     5.754    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[50].i_madd/i_addsub_mult_add/aclk
+    DSP48_X0Y39          DSP48E1                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[50].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+                         clock pessimism              0.186     5.940    
+                         clock uncertainty           -0.035     5.905    
+    DSP48_X0Y39          DSP48E1 (Setup_dsp48e1_CLK_D[8])
+                                                     -0.350     5.555    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[50].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1
+  -------------------------------------------------------------------
+                         required time                          5.555    
+                         arrival time                          -5.481    
+  -------------------------------------------------------------------
+                         slack                                  0.074    
+
+Slack (MET) :             0.079ns  (required time - arrival time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][10]__0/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][10]_srl3/D
+                            (rising edge-triggered cell SRL16E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.300ns  (sysclk_p rise@2.300ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        1.871ns  (logic 0.393ns (21.009%)  route 1.478ns (78.991%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.251ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.373ns = ( 5.673 - 2.300 ) 
+    Source Clock Delay      (SCD):    3.757ns
+    Clock Pessimism Removal (CPR):    0.132ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.800     0.800 r  clkin_buf/O
+                         net (fo=1, routed)           1.502     2.302    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     2.379 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.377     3.757    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/aclk
+    SLICE_X14Y101        FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][10]__0/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y101        FDRE (Prop_fdre_C_Q)         0.393     4.150 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_buff.i_buff/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][10]__0/Q
+                         net (fo=1, routed)           1.478     5.627    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[1][10]__0
+    SLICE_X30Y53         SRL16E                                       r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][10]_srl3/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      2.300     2.300 r  
+    T14                                               0.000     2.300 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     2.300    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.759     3.059 r  clkin_buf/O
+                         net (fo=1, routed)           1.421     4.480    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.073     4.553 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.120     5.673    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/aclk
+    SLICE_X30Y53         SRL16E                                       r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][10]_srl3/CLK
+                         clock pessimism              0.132     5.806    
+                         clock uncertainty           -0.035     5.771    
+    SLICE_X30Y53         SRL16E (Setup_srl16e_CLK_D)
+                                                     -0.064     5.707    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_sym_array.g_data_sym[29].g_data_sym_casc_buff.i_data_sym_casc_buff/g_delay.i_delay/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[2][10]_srl3
+  -------------------------------------------------------------------
+                         required time                          5.707    
+                         arrival time                          -5.627    
+  -------------------------------------------------------------------
+                         slack                                  0.079    
+
+Slack (MET) :             0.079ns  (required time - arrival time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[36][14]__0/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[52].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/D[14]
+                            (rising edge-triggered cell DSP48E1 clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.300ns  (sysclk_p rise@2.300ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        1.877ns  (logic 0.361ns (19.231%)  route 1.516ns (80.769%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.042ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.454ns = ( 5.754 - 2.300 ) 
+    Source Clock Delay      (SCD):    3.598ns
+    Clock Pessimism Removal (CPR):    0.186ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.800     0.800 r  clkin_buf/O
+                         net (fo=1, routed)           1.502     2.302    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     2.379 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.219     3.598    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].i_data_casc_dly/aclk
+    SLICE_X14Y65         FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[36][14]__0/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y65         FDRE (Prop_fdre_C_Q)         0.361     3.959 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[36][14]__0/Q
+                         net (fo=11, routed)          1.516     5.476    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[52].i_madd/i_addsub_mult_add/D[14]
+    DSP48_X0Y37          DSP48E1                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[52].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/D[14]
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      2.300     2.300 r  
+    T14                                               0.000     2.300 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     2.300    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.759     3.059 r  clkin_buf/O
+                         net (fo=1, routed)           1.421     4.480    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.073     4.553 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.201     5.754    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[52].i_madd/i_addsub_mult_add/aclk
+    DSP48_X0Y37          DSP48E1                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[52].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+                         clock pessimism              0.186     5.940    
+                         clock uncertainty           -0.035     5.905    
+    DSP48_X0Y37          DSP48E1 (Setup_dsp48e1_CLK_D[14])
+                                                     -0.350     5.555    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[52].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1
+  -------------------------------------------------------------------
+                         required time                          5.555    
+                         arrival time                          -5.476    
+  -------------------------------------------------------------------
+                         slack                                  0.079    
+
+Slack (MET) :             0.082ns  (required time - arrival time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[4]/CE
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.300ns  (sysclk_p rise@2.300ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        1.970ns  (logic 0.341ns (17.311%)  route 1.629ns (82.689%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.063ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.433ns = ( 5.733 - 2.300 ) 
+    Source Clock Delay      (SCD):    3.623ns
+    Clock Pessimism Removal (CPR):    0.126ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.800     0.800 r  clkin_buf/O
+                         net (fo=1, routed)           1.502     2.302    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     2.379 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.244     3.623    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/aclk
+    SLICE_X13Y47         FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y47         FDRE (Prop_fdre_C_Q)         0.341     3.964 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/Q
+                         net (fo=1381, routed)        1.629     5.593    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/p_6_out[0]
+    SLICE_X3Y85          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[4]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      2.300     2.300 r  
+    T14                                               0.000     2.300 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     2.300    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.759     3.059 r  clkin_buf/O
+                         net (fo=1, routed)           1.421     4.480    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.073     4.553 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.180     5.733    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X3Y85          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[4]/C
+                         clock pessimism              0.126     5.860    
+                         clock uncertainty           -0.035     5.825    
+    SLICE_X3Y85          FDRE (Setup_fdre_C_CE)      -0.150     5.675    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[4]
+  -------------------------------------------------------------------
+                         required time                          5.675    
+                         arrival time                          -5.593    
+  -------------------------------------------------------------------
+                         slack                                  0.082    
+
+Slack (MET) :             0.082ns  (required time - arrival time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[6]/CE
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.300ns  (sysclk_p rise@2.300ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        1.970ns  (logic 0.341ns (17.311%)  route 1.629ns (82.689%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.063ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.433ns = ( 5.733 - 2.300 ) 
+    Source Clock Delay      (SCD):    3.623ns
+    Clock Pessimism Removal (CPR):    0.126ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.800     0.800 r  clkin_buf/O
+                         net (fo=1, routed)           1.502     2.302    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     2.379 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.244     3.623    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/aclk
+    SLICE_X13Y47         FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y47         FDRE (Prop_fdre_C_Q)         0.341     3.964 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/Q
+                         net (fo=1381, routed)        1.629     5.593    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/p_6_out[0]
+    SLICE_X3Y85          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[6]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      2.300     2.300 r  
+    T14                                               0.000     2.300 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     2.300    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.759     3.059 r  clkin_buf/O
+                         net (fo=1, routed)           1.421     4.480    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.073     4.553 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.180     5.733    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X3Y85          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[6]/C
+                         clock pessimism              0.126     5.860    
+                         clock uncertainty           -0.035     5.825    
+    SLICE_X3Y85          FDRE (Setup_fdre_C_CE)      -0.150     5.675    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[6]
+  -------------------------------------------------------------------
+                         required time                          5.675    
+                         arrival time                          -5.593    
+  -------------------------------------------------------------------
+                         slack                                  0.082    
+
+Slack (MET) :             0.082ns  (required time - arrival time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/CE
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.300ns  (sysclk_p rise@2.300ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        1.970ns  (logic 0.341ns (17.311%)  route 1.629ns (82.689%))
+  Logic Levels:           0  
+  Clock Path Skew:        -0.063ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    3.433ns = ( 5.733 - 2.300 ) 
+    Source Clock Delay      (SCD):    3.623ns
+    Clock Pessimism Removal (CPR):    0.126ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.800     0.800 r  clkin_buf/O
+                         net (fo=1, routed)           1.502     2.302    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     2.379 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.244     3.623    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/aclk
+    SLICE_X13Y47         FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y47         FDRE (Prop_fdre_C_Q)         0.341     3.964 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.i_cntrl_src/gen_reg.d_reg_reg[0]/Q
+                         net (fo=1381, routed)        1.629     5.593    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/p_6_out[0]
+    SLICE_X3Y85          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/CE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      2.300     2.300 r  
+    T14                                               0.000     2.300 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     2.300    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.759     3.059 r  clkin_buf/O
+                         net (fo=1, routed)           1.421     4.480    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.073     4.553 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        1.180     5.733    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X3Y85          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/C
+                         clock pessimism              0.126     5.860    
+                         clock uncertainty           -0.035     5.825    
+    SLICE_X3Y85          FDRE (Setup_fdre_C_CE)      -0.150     5.675    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[53].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]
+  -------------------------------------------------------------------
+                         required time                          5.675    
+                         arrival time                          -5.593    
+  -------------------------------------------------------------------
+                         slack                                  0.082    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.055ns  (arrival time - required time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[74].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[75].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[12][7]_srl13/D
+                            (rising edge-triggered cell SRL16E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk_p rise@0.000ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        0.253ns  (logic 0.141ns (55.655%)  route 0.112ns (44.345%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.963ns
+    Source Clock Delay      (SCD):    1.602ns
+    Clock Pessimism Removal (CPR):    0.346ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.379     0.379 r  clkin_buf/O
+                         net (fo=1, routed)           0.634     1.013    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.027     1.040 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.562     1.602    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[74].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X13Y36         FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[74].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y36         FDRE (Prop_fdre_C_Q)         0.141     1.743 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[74].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/Q
+                         net (fo=2, routed)           0.112     1.855    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[75].i_data_casc_dly/gen_reg.d_reg_reg[7]
+    SLICE_X12Y35         SRL16E                                       r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[75].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[12][7]_srl13/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.414     0.414 r  clkin_buf/O
+                         net (fo=1, routed)           0.689     1.103    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.133 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.831     1.963    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[75].i_data_casc_dly/aclk
+    SLICE_X12Y35         SRL16E                                       r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[75].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[12][7]_srl13/CLK
+                         clock pessimism             -0.346     1.617    
+    SLICE_X12Y35         SRL16E (Hold_srl16e_CLK_D)
+                                                      0.183     1.800    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[75].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[12][7]_srl13
+  -------------------------------------------------------------------
+                         required time                         -1.800    
+                         arrival time                           1.855    
+  -------------------------------------------------------------------
+                         slack                                  0.055    
+
+Slack (MET) :             0.073ns  (arrival time - required time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[69].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[17][7]_srl18/D
+                            (rising edge-triggered cell SRLC32E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk_p rise@0.000ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        0.272ns  (logic 0.164ns (60.296%)  route 0.108ns (39.704%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.968ns
+    Source Clock Delay      (SCD):    1.606ns
+    Clock Pessimism Removal (CPR):    0.346ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.379     0.379 r  clkin_buf/O
+                         net (fo=1, routed)           0.634     1.013    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.027     1.040 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.566     1.606    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[69].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X14Y46         FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[69].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y46         FDRE (Prop_fdre_C_Q)         0.164     1.770 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[69].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/Q
+                         net (fo=2, routed)           0.108     1.878    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/gen_reg.d_reg_reg[7]
+    SLICE_X12Y46         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[17][7]_srl18/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.414     0.414 r  clkin_buf/O
+                         net (fo=1, routed)           0.689     1.103    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.133 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.836     1.968    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/aclk
+    SLICE_X12Y46         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[17][7]_srl18/CLK
+                         clock pessimism             -0.346     1.622    
+    SLICE_X12Y46         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.183     1.805    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[17][7]_srl18
+  -------------------------------------------------------------------
+                         required time                         -1.805    
+                         arrival time                           1.878    
+  -------------------------------------------------------------------
+                         slack                                  0.073    
+
+Slack (MET) :             0.073ns  (arrival time - required time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[16][6]_srl17/D
+                            (rising edge-triggered cell SRLC32E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk_p rise@0.000ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        0.292ns  (logic 0.164ns (56.145%)  route 0.128ns (43.855%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.036ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.968ns
+    Source Clock Delay      (SCD):    1.606ns
+    Clock Pessimism Removal (CPR):    0.326ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.379     0.379 r  clkin_buf/O
+                         net (fo=1, routed)           0.634     1.013    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.027     1.040 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.566     1.606    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X8Y45          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y45          FDRE (Prop_fdre_C_Q)         0.164     1.770 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[6]/Q
+                         net (fo=2, routed)           0.128     1.898    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/gen_reg.d_reg_reg[6]
+    SLICE_X10Y44         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[16][6]_srl17/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.414     0.414 r  clkin_buf/O
+                         net (fo=1, routed)           0.689     1.103    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.133 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.836     1.968    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/aclk
+    SLICE_X10Y44         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[16][6]_srl17/CLK
+                         clock pessimism             -0.326     1.642    
+    SLICE_X10Y44         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.183     1.825    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[16][6]_srl17
+  -------------------------------------------------------------------
+                         required time                         -1.825    
+                         arrival time                           1.898    
+  -------------------------------------------------------------------
+                         slack                                  0.073    
+
+Slack (MET) :             0.076ns  (arrival time - required time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[64].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[65].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[22][2]_srl23/D
+                            (rising edge-triggered cell SRLC32E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk_p rise@0.000ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        0.206ns  (logic 0.141ns (68.542%)  route 0.065ns (31.458%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.967ns
+    Source Clock Delay      (SCD):    1.605ns
+    Clock Pessimism Removal (CPR):    0.349ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.379     0.379 r  clkin_buf/O
+                         net (fo=1, routed)           0.634     1.013    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.027     1.040 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.565     1.605    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[64].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X9Y50          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[64].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y50          FDRE (Prop_fdre_C_Q)         0.141     1.746 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[64].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[2]/Q
+                         net (fo=2, routed)           0.065     1.811    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[65].i_data_casc_dly/gen_reg.d_reg_reg[2]
+    SLICE_X8Y50          SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[65].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[22][2]_srl23/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.414     0.414 r  clkin_buf/O
+                         net (fo=1, routed)           0.689     1.103    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.133 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.834     1.967    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[65].i_data_casc_dly/aclk
+    SLICE_X8Y50          SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[65].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[22][2]_srl23/CLK
+                         clock pessimism             -0.349     1.618    
+    SLICE_X8Y50          SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.117     1.735    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[65].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[22][2]_srl23
+  -------------------------------------------------------------------
+                         required time                         -1.735    
+                         arrival time                           1.811    
+  -------------------------------------------------------------------
+                         slack                                  0.076    
+
+Slack (MET) :             0.077ns  (arrival time - required time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][2]_srl21/D
+                            (rising edge-triggered cell SRLC32E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk_p rise@0.000ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        0.207ns  (logic 0.141ns (68.094%)  route 0.066ns (31.906%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.969ns
+    Source Clock Delay      (SCD):    1.607ns
+    Clock Pessimism Removal (CPR):    0.349ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.379     0.379 r  clkin_buf/O
+                         net (fo=1, routed)           0.634     1.013    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.027     1.040 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.567     1.607    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X11Y48         FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y48         FDRE (Prop_fdre_C_Q)         0.141     1.748 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[2]/Q
+                         net (fo=2, routed)           0.066     1.814    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_reg.d_reg_reg[2]
+    SLICE_X10Y48         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][2]_srl21/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.414     0.414 r  clkin_buf/O
+                         net (fo=1, routed)           0.689     1.103    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.133 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.837     1.969    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/aclk
+    SLICE_X10Y48         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][2]_srl21/CLK
+                         clock pessimism             -0.349     1.620    
+    SLICE_X10Y48         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.117     1.737    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][2]_srl21
+  -------------------------------------------------------------------
+                         required time                         -1.737    
+                         arrival time                           1.814    
+  -------------------------------------------------------------------
+                         slack                                  0.077    
+
+Slack (MET) :             0.077ns  (arrival time - required time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][5]_srl21/D
+                            (rising edge-triggered cell SRLC32E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk_p rise@0.000ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        0.207ns  (logic 0.141ns (68.094%)  route 0.066ns (31.906%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.969ns
+    Source Clock Delay      (SCD):    1.607ns
+    Clock Pessimism Removal (CPR):    0.349ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.379     0.379 r  clkin_buf/O
+                         net (fo=1, routed)           0.634     1.013    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.027     1.040 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.567     1.607    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X9Y47          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y47          FDRE (Prop_fdre_C_Q)         0.141     1.748 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[5]/Q
+                         net (fo=2, routed)           0.066     1.814    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_reg.d_reg_reg[5]
+    SLICE_X8Y47          SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][5]_srl21/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.414     0.414 r  clkin_buf/O
+                         net (fo=1, routed)           0.689     1.103    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.133 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.837     1.969    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/aclk
+    SLICE_X8Y47          SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][5]_srl21/CLK
+                         clock pessimism             -0.349     1.620    
+    SLICE_X8Y47          SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.117     1.737    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][5]_srl21
+  -------------------------------------------------------------------
+                         required time                         -1.737    
+                         arrival time                           1.814    
+  -------------------------------------------------------------------
+                         slack                                  0.077    
+
+Slack (MET) :             0.077ns  (arrival time - required time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[69].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[17][1]_srl18/D
+                            (rising edge-triggered cell SRLC32E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk_p rise@0.000ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        0.207ns  (logic 0.141ns (68.094%)  route 0.066ns (31.906%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.996ns
+    Source Clock Delay      (SCD):    1.633ns
+    Clock Pessimism Removal (CPR):    0.350ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.379     0.379 r  clkin_buf/O
+                         net (fo=1, routed)           0.634     1.013    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.027     1.040 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.593     1.633    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[69].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X7Y43          FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[69].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X7Y43          FDRE (Prop_fdre_C_Q)         0.141     1.774 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[69].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[1]/Q
+                         net (fo=2, routed)           0.066     1.840    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/gen_reg.d_reg_reg[1]
+    SLICE_X6Y43          SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[17][1]_srl18/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.414     0.414 r  clkin_buf/O
+                         net (fo=1, routed)           0.689     1.103    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.133 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.864     1.996    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/aclk
+    SLICE_X6Y43          SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[17][1]_srl18/CLK
+                         clock pessimism             -0.350     1.646    
+    SLICE_X6Y43          SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.117     1.763    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[17][1]_srl18
+  -------------------------------------------------------------------
+                         required time                         -1.763    
+                         arrival time                           1.840    
+  -------------------------------------------------------------------
+                         slack                                  0.077    
+
+Slack (MET) :             0.077ns  (arrival time - required time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][7]_srl21/D
+                            (rising edge-triggered cell SRLC32E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk_p rise@0.000ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        0.207ns  (logic 0.141ns (68.062%)  route 0.066ns (31.938%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.969ns
+    Source Clock Delay      (SCD):    1.607ns
+    Clock Pessimism Removal (CPR):    0.349ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.379     0.379 r  clkin_buf/O
+                         net (fo=1, routed)           0.634     1.013    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.027     1.040 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.567     1.607    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X15Y48         FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y48         FDRE (Prop_fdre_C_Q)         0.141     1.748 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[66].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[7]/Q
+                         net (fo=2, routed)           0.066     1.814    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_reg.d_reg_reg[7]
+    SLICE_X14Y48         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][7]_srl21/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.414     0.414 r  clkin_buf/O
+                         net (fo=1, routed)           0.689     1.103    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.133 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.837     1.969    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/aclk
+    SLICE_X14Y48         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][7]_srl21/CLK
+                         clock pessimism             -0.349     1.620    
+    SLICE_X14Y48         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.117     1.737    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[20][7]_srl21
+  -------------------------------------------------------------------
+                         required time                         -1.737    
+                         arrival time                           1.814    
+  -------------------------------------------------------------------
+                         slack                                  0.077    
+
+Slack (MET) :             0.077ns  (arrival time - required time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[68].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[19][2]_srl20/D
+                            (rising edge-triggered cell SRLC32E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk_p rise@0.000ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        0.207ns  (logic 0.141ns (68.062%)  route 0.066ns (31.938%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.968ns
+    Source Clock Delay      (SCD):    1.606ns
+    Clock Pessimism Removal (CPR):    0.349ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.379     0.379 r  clkin_buf/O
+                         net (fo=1, routed)           0.634     1.013    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.027     1.040 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.566     1.606    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X11Y46         FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X11Y46         FDRE (Prop_fdre_C_Q)         0.141     1.747 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[67].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[2]/Q
+                         net (fo=2, routed)           0.066     1.813    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[68].i_data_casc_dly/gen_reg.d_reg_reg[2]
+    SLICE_X10Y46         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[68].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[19][2]_srl20/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.414     0.414 r  clkin_buf/O
+                         net (fo=1, routed)           0.689     1.103    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.133 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.836     1.968    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[68].i_data_casc_dly/aclk
+    SLICE_X10Y46         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[68].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[19][2]_srl20/CLK
+                         clock pessimism             -0.349     1.619    
+    SLICE_X10Y46         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.117     1.736    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[68].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[19][2]_srl20
+  -------------------------------------------------------------------
+                         required time                         -1.736    
+                         arrival time                           1.813    
+  -------------------------------------------------------------------
+                         slack                                  0.077    
+
+Slack (MET) :             0.077ns  (arrival time - required time)
+  Source:                 fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[10]/C
+                            (rising edge-triggered cell FDRE clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Destination:            fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[16][10]_srl17/D
+                            (rising edge-triggered cell SRLC32E clocked by sysclk_p  {rise@0.000ns fall@1.150ns period=2.300ns})
+  Path Group:             sysclk_p
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sysclk_p rise@0.000ns - sysclk_p rise@0.000ns)
+  Data Path Delay:        0.207ns  (logic 0.141ns (68.062%)  route 0.066ns (31.938%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.968ns
+    Source Clock Delay      (SCD):    1.606ns
+    Clock Pessimism Removal (CPR):    0.349ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.379     0.379 r  clkin_buf/O
+                         net (fo=1, routed)           0.634     1.013    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.027     1.040 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.566     1.606    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].g_data_buff.i_data_buf/g_buff.i_buff/aclk
+    SLICE_X13Y44         FDRE                                         r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[10]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y44         FDRE (Prop_fdre_C_Q)         0.141     1.747 r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[70].g_data_buff.i_data_buf/g_buff.i_buff/gen_reg.d_reg_reg[10]/Q
+                         net (fo=2, routed)           0.066     1.813    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/gen_reg.d_reg_reg[10]
+    SLICE_X12Y44         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[16][10]_srl17/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sysclk_p rise edge)
+                                                      0.000     0.000 r  
+    T14                                               0.000     0.000 r  sysclk_p (IN)
+                         net (fo=0)                   0.000     0.000    sysclk_p
+    T14                  IBUFDS (Prop_ibufds_I_O)     0.414     0.414 r  clkin_buf/O
+                         net (fo=1, routed)           0.689     1.103    clk
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.030     1.133 r  clk_BUFG_inst/O
+                         net (fo=8333, routed)        0.836     1.968    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/aclk
+    SLICE_X12Y44         SRLC32E                                      r  fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[16][10]_srl17/CLK
+                         clock pessimism             -0.349     1.619    
+    SLICE_X12Y44         SRLC32E (Hold_srlc32e_CLK_D)
+                                                      0.117     1.736    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[71].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[16][10]_srl17
+  -------------------------------------------------------------------
+                         required time                         -1.736    
+                         arrival time                           1.813    
+  -------------------------------------------------------------------
+                         slack                                  0.077    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sysclk_p
+Waveform(ns):       { 0.000 1.150 }
+Period(ns):         2.300
+Sources:            { sysclk_p }
+
+Check Type        Corner  Lib Pin      Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     BUFG/I       n/a            1.592         2.300       0.708      BUFGCTRL_X0Y0  clk_BUFG_inst/I
+Min Period        n/a     DSP48E1/CLK  n/a            1.590         2.300       0.710      DSP48_X1Y35    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[14].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.590         2.300       0.710      DSP48_X1Y48    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[1].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.590         2.300       0.710      DSP48_X1Y24    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[25].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.590         2.300       0.710      DSP48_X0Y59    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[30].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.590         2.300       0.710      DSP48_X0Y53    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[36].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.590         2.300       0.710      DSP48_X0Y48    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[41].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.590         2.300       0.710      DSP48_X0Y42    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[47].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.590         2.300       0.710      DSP48_X0Y37    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[52].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+Min Period        n/a     DSP48E1/CLK  n/a            1.590         2.300       0.710      DSP48_X0Y31    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_madds.g_madd[58].i_madd/i_addsub_mult_add/g_dsp48.g_dsp48e1.i_dsp48e1/CLK
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.770         1.150       0.380      SLICE_X2Y77    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[45].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[31][10]_srl32/CLK
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.770         1.150       0.380      SLICE_X2Y77    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[45].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[42][10]_srl11/CLK
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.770         1.150       0.380      SLICE_X2Y72    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[47].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[31][2]_srl32/CLK
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.770         1.150       0.380      SLICE_X2Y72    fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[47].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[40][2]_srl9/CLK
+Low Pulse Width   Slow    SRLC32E/CLK  n/a            0.770         1.150       0.380      SLICE_X30Y81   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[31][8]_srl32/CLK
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.770         1.150       0.380      SLICE_X30Y81   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[52].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[35][8]_srl4/CLK
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.770         1.150       0.380      SLICE_X10Y27   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[79].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[8][10]_srl9/CLK
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.770         1.150       0.380      SLICE_X10Y27   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[79].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[8][11]_srl9/CLK
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.770         1.150       0.380      SLICE_X10Y27   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[79].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[8][12]_srl9/CLK
+Low Pulse Width   Slow    SRL16E/CLK   n/a            0.770         1.150       0.380      SLICE_X10Y27   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[79].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[8][13]_srl9/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.770         1.150       0.380      SLICE_X52Y89   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[12].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[31][14]_srl32/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.770         1.150       0.380      SLICE_X52Y89   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[12].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[63][14]_srl32/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.770         1.150       0.380      SLICE_X52Y89   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[12].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[79][14]_srl16/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.770         1.150       0.380      SLICE_X50Y89   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[13].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[31][0]_srl32/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.770         1.150       0.380      SLICE_X50Y89   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[13].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[63][0]_srl32/CLK
+High Pulse Width  Slow    SRL16E/CLK   n/a            0.770         1.150       0.380      SLICE_X50Y89   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[13].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[78][0]_srl15/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.770         1.150       0.380      SLICE_X52Y79   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[14].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[31][14]_srl32/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.770         1.150       0.380      SLICE_X38Y84   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[14].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[31][5]_srl32/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.770         1.150       0.380      SLICE_X34Y86   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[14].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[31][8]_srl32/CLK
+High Pulse Width  Slow    SRLC32E/CLK  n/a            0.770         1.150       0.380      SLICE_X52Y79   fir_xilinx_wrapper_inst/fir_90taps_inst/U0/i_synth/g_single_rate.i_single_rate/g_parallel.g_paths[0].g_symmetric.g_data_array.g_data[14].i_data_casc_dly/gen_dly.gen_shiftreg.gen_rtl_delay.delay_bus_reg[63][14]_srl32/CLK
+
+
+
