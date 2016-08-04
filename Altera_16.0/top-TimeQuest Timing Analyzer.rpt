@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for top
-Thu Aug 04 19:37:51 2016
+Thu Aug 04 20:18:26 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -54,7 +54,9 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
  46. Report RSKM
  47. Unconstrained Paths Summary
  48. Clock Status Summary
- 49. TimeQuest Timing Analyzer Messages
+ 49. Unconstrained Output Ports
+ 50. Unconstrained Output Ports
+ 51. TimeQuest Timing Analyzer Messages
 
 
 
@@ -128,7 +130,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; timing.sdc    ; OK     ; Thu Aug 04 19:37:16 2016 ;
+; timing.sdc    ; OK     ; Thu Aug 04 20:14:47 2016 ;
 +---------------+--------+--------------------------+
 
 
@@ -137,7 +139,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
 ; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets    ;
 +------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
-; sysclk     ; Base ; 5.000  ; 200.0 MHz ; 0.000 ; 2.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sysclk } ;
+; sysclk     ; Base ; 2.500  ; 400.0 MHz ; 0.000 ; 1.250 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { sysclk } ;
 +------------+------+--------+-----------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------+
 
 
@@ -146,7 +148,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 150.92 MHz ; 150.92 MHz      ; sysclk     ;      ;
+; 213.72 MHz ; 213.72 MHz      ; sysclk     ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -162,7 +164,7 @@ HTML report is unavailable in plain text report export.
 +--------+--------+-------------------+
 ; Clock  ; Slack  ; End Point TNS     ;
 +--------+--------+-------------------+
-; sysclk ; -1.626 ; -1.626            ;
+; sysclk ; -2.179 ; -431.262          ;
 +--------+--------+-------------------+
 
 
@@ -171,17 +173,17 @@ HTML report is unavailable in plain text report export.
 +--------+-------+-------------------+
 ; Clock  ; Slack ; End Point TNS     ;
 +--------+-------+-------------------+
-; sysclk ; 0.168 ; 0.000             ;
+; sysclk ; 0.176 ; 0.000             ;
 +--------+-------+-------------------+
 
 
 +----------------------------------------+
 ; Slow 1100mV 85C Model Recovery Summary ;
-+--------+-------+-----------------------+
-; Clock  ; Slack ; End Point TNS         ;
-+--------+-------+-----------------------+
-; sysclk ; 0.231 ; 0.000                 ;
-+--------+-------+-----------------------+
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; sysclk ; -2.283 ; -18778.392           ;
++--------+--------+----------------------+
 
 
 +---------------------------------------+
@@ -189,28 +191,23 @@ HTML report is unavailable in plain text report export.
 +--------+-------+----------------------+
 ; Clock  ; Slack ; End Point TNS        ;
 +--------+-------+----------------------+
-; sysclk ; 1.434 ; 0.000                ;
+; sysclk ; 1.450 ; 0.000                ;
 +--------+-------+----------------------+
 
 
 +---------------------------------------------------+
 ; Slow 1100mV 85C Model Minimum Pulse Width Summary ;
-+--------+-------+----------------------------------+
-; Clock  ; Slack ; End Point TNS                    ;
-+--------+-------+----------------------------------+
-; sysclk ; 1.564 ; 0.000                            ;
-+--------+-------+----------------------------------+
++--------+--------+---------------------------------+
+; Clock  ; Slack  ; End Point TNS                   ;
++--------+--------+---------------------------------+
+; sysclk ; -0.725 ; -4592.150                       ;
++--------+--------+---------------------------------+
 
 
 -----------------------------------------------
 ; Slow 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 1
-Shortest Synchronizer Chain: 3 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 10.762 ns
-
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
 
 
 
@@ -219,7 +216,7 @@ Worst Case Available Settling Time: 10.762 ns
 +------------+-----------------+------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note ;
 +------------+-----------------+------------+------+
-; 152.51 MHz ; 152.51 MHz      ; sysclk     ;      ;
+; 205.09 MHz ; 205.09 MHz      ; sysclk     ;      ;
 +------------+-----------------+------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -229,7 +226,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+--------+------------------+
 ; Clock  ; Slack  ; End Point TNS    ;
 +--------+--------+------------------+
-; sysclk ; -1.557 ; -1.557           ;
+; sysclk ; -2.376 ; -610.420         ;
 +--------+--------+------------------+
 
 
@@ -238,17 +235,17 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+-------+------------------+
 ; Clock  ; Slack ; End Point TNS    ;
 +--------+-------+------------------+
-; sysclk ; 0.056 ; 0.000            ;
+; sysclk ; 0.063 ; 0.000            ;
 +--------+-------+------------------+
 
 
 +---------------------------------------+
 ; Slow 1100mV 0C Model Recovery Summary ;
-+--------+-------+----------------------+
-; Clock  ; Slack ; End Point TNS        ;
-+--------+-------+----------------------+
-; sysclk ; 0.294 ; 0.000                ;
-+--------+-------+----------------------+
++--------+--------+---------------------+
+; Clock  ; Slack  ; End Point TNS       ;
++--------+--------+---------------------+
+; sysclk ; -2.220 ; -18280.713          ;
++--------+--------+---------------------+
 
 
 +--------------------------------------+
@@ -256,38 +253,33 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------+-------+---------------------+
 ; Clock  ; Slack ; End Point TNS       ;
 +--------+-------+---------------------+
-; sysclk ; 1.385 ; 0.000               ;
+; sysclk ; 1.408 ; 0.000               ;
 +--------+-------+---------------------+
 
 
 +--------------------------------------------------+
 ; Slow 1100mV 0C Model Minimum Pulse Width Summary ;
-+--------+-------+---------------------------------+
-; Clock  ; Slack ; End Point TNS                   ;
-+--------+-------+---------------------------------+
-; sysclk ; 1.493 ; 0.000                           ;
-+--------+-------+---------------------------------+
++--------+--------+--------------------------------+
+; Clock  ; Slack  ; End Point TNS                  ;
++--------+--------+--------------------------------+
+; sysclk ; -0.725 ; -4592.150                      ;
++--------+--------+--------------------------------+
 
 
 ----------------------------------------------
 ; Slow 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-The design MTBF is not calculated because there are no specified synchronizers in the design.
-Number of Synchronizer Chains Found: 1
-Shortest Synchronizer Chain: 3 Registers
-Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 10.980 ns
-
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
 
 
 
 +-------------------------------------+
 ; Fast 1100mV 85C Model Setup Summary ;
-+--------+-------+--------------------+
-; Clock  ; Slack ; End Point TNS      ;
-+--------+-------+--------------------+
-; sysclk ; 0.998 ; 0.000              ;
-+--------+-------+--------------------+
++--------+--------+-------------------+
+; Clock  ; Slack  ; End Point TNS     ;
++--------+--------+-------------------+
+; sysclk ; -0.338 ; -187.982          ;
++--------+--------+-------------------+
 
 
 +------------------------------------+
@@ -295,17 +287,17 @@ Worst Case Available Settling Time: 10.980 ns
 +--------+-------+-------------------+
 ; Clock  ; Slack ; End Point TNS     ;
 +--------+-------+-------------------+
-; sysclk ; 0.105 ; 0.000             ;
+; sysclk ; 0.122 ; 0.000             ;
 +--------+-------+-------------------+
 
 
 +----------------------------------------+
 ; Fast 1100mV 85C Model Recovery Summary ;
-+--------+-------+-----------------------+
-; Clock  ; Slack ; End Point TNS         ;
-+--------+-------+-----------------------+
-; sysclk ; 2.493 ; 0.000                 ;
-+--------+-------+-----------------------+
++--------+--------+----------------------+
+; Clock  ; Slack  ; End Point TNS        ;
++--------+--------+----------------------+
+; sysclk ; -0.017 ; -21.428              ;
++--------+--------+----------------------+
 
 
 +---------------------------------------+
@@ -313,17 +305,17 @@ Worst Case Available Settling Time: 10.980 ns
 +--------+-------+----------------------+
 ; Clock  ; Slack ; End Point TNS        ;
 +--------+-------+----------------------+
-; sysclk ; 0.799 ; 0.000                ;
+; sysclk ; 0.814 ; 0.000                ;
 +--------+-------+----------------------+
 
 
 +---------------------------------------------------+
 ; Fast 1100mV 85C Model Minimum Pulse Width Summary ;
-+--------+-------+----------------------------------+
-; Clock  ; Slack ; End Point TNS                    ;
-+--------+-------+----------------------------------+
-; sysclk ; 1.499 ; 0.000                            ;
-+--------+-------+----------------------------------+
++--------+--------+---------------------------------+
+; Clock  ; Slack  ; End Point TNS                   ;
++--------+--------+---------------------------------+
+; sysclk ; -0.202 ; -1279.468                       ;
++--------+--------+---------------------------------+
 
 
 -----------------------------------------------
@@ -333,18 +325,18 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 1
 Shortest Synchronizer Chain: 3 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 12.311 ns
+Worst Case Available Settling Time: 4.170 ns
 
 
 
 
 +------------------------------------+
 ; Fast 1100mV 0C Model Setup Summary ;
-+--------+-------+-------------------+
-; Clock  ; Slack ; End Point TNS     ;
-+--------+-------+-------------------+
-; sysclk ; 1.205 ; 0.000             ;
-+--------+-------+-------------------+
++--------+--------+------------------+
+; Clock  ; Slack  ; End Point TNS    ;
++--------+--------+------------------+
+; sysclk ; -0.154 ; -374.206         ;
++--------+--------+------------------+
 
 
 +-----------------------------------+
@@ -352,7 +344,7 @@ Worst Case Available Settling Time: 12.311 ns
 +--------+-------+------------------+
 ; Clock  ; Slack ; End Point TNS    ;
 +--------+-------+------------------+
-; sysclk ; 0.040 ; 0.000            ;
+; sysclk ; 0.052 ; 0.000            ;
 +--------+-------+------------------+
 
 
@@ -361,7 +353,7 @@ Worst Case Available Settling Time: 12.311 ns
 +--------+-------+----------------------+
 ; Clock  ; Slack ; End Point TNS        ;
 +--------+-------+----------------------+
-; sysclk ; 2.552 ; 0.000                ;
+; sysclk ; 0.044 ; 0.000                ;
 +--------+-------+----------------------+
 
 
@@ -370,17 +362,17 @@ Worst Case Available Settling Time: 12.311 ns
 +--------+-------+---------------------+
 ; Clock  ; Slack ; End Point TNS       ;
 +--------+-------+---------------------+
-; sysclk ; 0.748 ; 0.000               ;
+; sysclk ; 0.757 ; 0.000               ;
 +--------+-------+---------------------+
 
 
 +--------------------------------------------------+
 ; Fast 1100mV 0C Model Minimum Pulse Width Summary ;
-+--------+-------+---------------------------------+
-; Clock  ; Slack ; End Point TNS                   ;
-+--------+-------+---------------------------------+
-; sysclk ; 1.493 ; 0.000                           ;
-+--------+-------+---------------------------------+
++--------+--------+--------------------------------+
+; Clock  ; Slack  ; End Point TNS                  ;
++--------+--------+--------------------------------+
+; sysclk ; -0.202 ; -1279.468                      ;
++--------+--------+--------------------------------+
 
 
 ----------------------------------------------
@@ -390,21 +382,21 @@ The design MTBF is not calculated because there are no specified synchronizers i
 Number of Synchronizer Chains Found: 1
 Shortest Synchronizer Chain: 3 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 12.616 ns
+Worst Case Available Settling Time: 4.567 ns
 
 
 
 
-+------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                          ;
-+------------------+--------+-------+----------+---------+---------------------+
-; Clock            ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
-+------------------+--------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -1.626 ; 0.040 ; 0.231    ; 0.748   ; 1.493               ;
-;  sysclk          ; -1.626 ; 0.040 ; 0.231    ; 0.748   ; 1.493               ;
-; Design-wide TNS  ; -1.626 ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
-;  sysclk          ; -1.626 ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
-+------------------+--------+-------+----------+---------+---------------------+
++----------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                              ;
++------------------+----------+-------+------------+---------+---------------------+
+; Clock            ; Setup    ; Hold  ; Recovery   ; Removal ; Minimum Pulse Width ;
++------------------+----------+-------+------------+---------+---------------------+
+; Worst-case Slack ; -2.376   ; 0.052 ; -2.283     ; 0.757   ; -0.725              ;
+;  sysclk          ; -2.376   ; 0.052 ; -2.283     ; 0.757   ; -0.725              ;
+; Design-wide TNS  ; -610.42  ; 0.0   ; -18778.392 ; 0.0     ; -4592.15            ;
+;  sysclk          ; -610.420 ; 0.000 ; -18778.392 ; 0.000   ; -4592.150           ;
++------------------+----------+-------+------------+---------+---------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -430,7 +422,7 @@ Worst Case Available Settling Time: 12.616 ns
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.6e-07 V                    ; 2.41 V              ; -0.0463 V           ; 0.201 V                              ; 0.131 V                              ; 4.61e-10 s                  ; 4.53e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.6e-07 V                   ; 2.41 V             ; -0.0463 V          ; 0.201 V                             ; 0.131 V                             ; 4.61e-10 s                 ; 4.53e-10 s                 ; No                        ; Yes                       ;
+; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-07 V                   ; 2.36 V              ; -0.0231 V           ; 0.14 V                               ; 0.089 V                              ; 4.52e-10 s                  ; 4.35e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.07e-07 V                  ; 2.36 V             ; -0.0231 V          ; 0.14 V                              ; 0.089 V                             ; 4.52e-10 s                 ; 4.35e-10 s                 ; No                        ; Yes                       ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -439,7 +431,7 @@ Worst Case Available Settling Time: 12.616 ns
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.96e-05 V                   ; 2.38 V              ; -0.0306 V           ; 0.23 V                               ; 0.206 V                              ; 4.83e-10 s                  ; 5.01e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.96e-05 V                  ; 2.38 V             ; -0.0306 V          ; 0.23 V                              ; 0.206 V                             ; 4.83e-10 s                 ; 5.01e-10 s                 ; No                        ; Yes                       ;
+; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.49e-05 V                   ; 2.34 V              ; -0.0118 V           ; 0.182 V                              ; 0.051 V                              ; 4.81e-10 s                  ; 4.83e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.49e-05 V                  ; 2.34 V             ; -0.0118 V          ; 0.182 V                             ; 0.051 V                             ; 4.81e-10 s                 ; 4.83e-10 s                 ; Yes                       ; Yes                       ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -448,7 +440,7 @@ Worst Case Available Settling Time: 12.616 ns
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 4.25e-06 V                   ; 2.9 V               ; -0.107 V            ; 0.378 V                              ; 0.16 V                               ; 2.87e-10 s                  ; 4.28e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 4.25e-06 V                  ; 2.9 V              ; -0.107 V           ; 0.378 V                             ; 0.16 V                              ; 2.87e-10 s                 ; 4.28e-10 s                 ; No                        ; No                        ;
+; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 3.54e-06 V                   ; 2.81 V              ; -0.0578 V           ; 0.303 V                              ; 0.28 V                               ; 2.93e-10 s                  ; 3.01e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 3.54e-06 V                  ; 2.81 V             ; -0.0578 V          ; 0.303 V                             ; 0.28 V                              ; 2.93e-10 s                 ; 3.01e-10 s                 ; No                        ; No                        ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -457,7 +449,7 @@ Worst Case Available Settling Time: 12.616 ns
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin        ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000247 V                   ; 2.85 V              ; -0.0711 V           ; 0.204 V                              ; 0.181 V                              ; 4.55e-10 s                  ; 4.49e-10 s                  ; No                         ; No                         ; 2.75 V                      ; 0.000247 V                  ; 2.85 V             ; -0.0711 V          ; 0.204 V                             ; 0.181 V                             ; 4.55e-10 s                 ; 4.49e-10 s                 ; No                        ; No                        ;
+; fpga_awake ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.75 V                       ; 0.000213 V                   ; 2.79 V              ; -0.0324 V           ; 0.139 V                              ; 0.119 V                              ; 4.42e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.75 V                      ; 0.000213 V                  ; 2.79 V             ; -0.0324 V          ; 0.139 V                             ; 0.119 V                             ; 4.42e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 +------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
@@ -466,7 +458,7 @@ Worst Case Available Settling Time: 12.616 ns
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; sysclk     ; sysclk   ; 28043    ; 0        ; 0        ; 0        ;
+; sysclk     ; sysclk   ; 28071    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -476,7 +468,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; sysclk     ; sysclk   ; 28043    ; 0        ; 0        ; 0        ;
+; sysclk     ; sysclk   ; 28071    ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -486,7 +478,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; sysclk     ; sysclk   ; 9153     ; 0        ; 0        ; 0        ;
+; sysclk     ; sysclk   ; 9179     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -496,7 +488,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------+----------+----------+----------+----------+----------+
 ; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +------------+----------+----------+----------+----------+----------+
-; sysclk     ; sysclk   ; 9153     ; 0        ; 0        ; 0        ;
+; sysclk     ; sysclk   ; 9179     ; 0        ; 0        ; 0        ;
 +------------+----------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -522,8 +514,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 0     ; 0    ;
-; Unconstrained Output Port Paths ; 0     ; 0    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
 +---------------------------------+-------+------+
 
 
@@ -536,13 +528,31 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +--------+--------+------+-------------+
 
 
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; fpga_awake  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; fpga_awake  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
 +------------------------------------+
 ; TimeQuest Timing Analyzer Messages ;
 +------------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Thu Aug 04 19:36:57 2016
+    Info: Processing started: Thu Aug 04 20:14:28 2016
 Info: Command: quartus_sta fir_90taps -c top
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -586,33 +596,28 @@ Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.626
+Info (332146): Worst-case setup slack is -2.179
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.626              -1.626 sysclk 
-Info (332146): Worst-case hold slack is 0.168
+    Info (332119):    -2.179            -431.262 sysclk 
+Info (332146): Worst-case hold slack is 0.176
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.168               0.000 sysclk 
-Info (332146): Worst-case recovery slack is 0.231
+    Info (332119):     0.176               0.000 sysclk 
+Info (332146): Worst-case recovery slack is -2.283
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.231               0.000 sysclk 
-Info (332146): Worst-case removal slack is 1.434
+    Info (332119):    -2.283          -18778.392 sysclk 
+Info (332146): Worst-case removal slack is 1.450
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.434               0.000 sysclk 
-Info (332146): Worst-case minimum pulse width slack is 1.564
+    Info (332119):     1.450               0.000 sysclk 
+Info (332146): Worst-case minimum pulse width slack is -0.725
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.564               0.000 sysclk 
+    Info (332119):    -0.725           -4592.150 sysclk 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
-    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 1
-    Info (332114): Shortest Synchronizer Chain: 3 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 10.762 ns
-    Info (332114): 
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -650,33 +655,28 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
-Info (332146): Worst-case setup slack is -1.557
+Info (332146): Worst-case setup slack is -2.376
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.557              -1.557 sysclk 
-Info (332146): Worst-case hold slack is 0.056
+    Info (332119):    -2.376            -610.420 sysclk 
+Info (332146): Worst-case hold slack is 0.063
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.056               0.000 sysclk 
-Info (332146): Worst-case recovery slack is 0.294
+    Info (332119):     0.063               0.000 sysclk 
+Info (332146): Worst-case recovery slack is -2.220
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.294               0.000 sysclk 
-Info (332146): Worst-case removal slack is 1.385
+    Info (332119):    -2.220          -18280.713 sysclk 
+Info (332146): Worst-case removal slack is 1.408
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.385               0.000 sysclk 
-Info (332146): Worst-case minimum pulse width slack is 1.493
+    Info (332119):     1.408               0.000 sysclk 
+Info (332146): Worst-case minimum pulse width slack is -0.725
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.493               0.000 sysclk 
+    Info (332119):    -0.725           -4592.150 sysclk 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
-    Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
-    Info (332114): Number of Synchronizer Chains Found: 1
-    Info (332114): Shortest Synchronizer Chain: 3 Registers
-    Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 10.980 ns
-    Info (332114): 
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
@@ -712,32 +712,34 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
     Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~MEMORYREGOUT
     Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~MEMORYREGOUT
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 0.998
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.338
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.998               0.000 sysclk 
-Info (332146): Worst-case hold slack is 0.105
+    Info (332119):    -0.338            -187.982 sysclk 
+Info (332146): Worst-case hold slack is 0.122
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.105               0.000 sysclk 
-Info (332146): Worst-case recovery slack is 2.493
+    Info (332119):     0.122               0.000 sysclk 
+Info (332146): Worst-case recovery slack is -0.017
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.493               0.000 sysclk 
-Info (332146): Worst-case removal slack is 0.799
+    Info (332119):    -0.017             -21.428 sysclk 
+Info (332146): Worst-case removal slack is 0.814
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.799               0.000 sysclk 
-Info (332146): Worst-case minimum pulse width slack is 1.499
+    Info (332119):     0.814               0.000 sysclk 
+Info (332146): Worst-case minimum pulse width slack is -0.202
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.499               0.000 sysclk 
+    Info (332119):    -0.202           -1279.468 sysclk 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 1
     Info (332114): Shortest Synchronizer Chain: 3 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 12.311 ns
+    Info (332114): Worst Case Available Settling Time: 4.170 ns
     Info (332114): 
 Info: Analyzing Fast 1100mV 0C Model
 Info (332097): The following timing edges are non-unate.  TimeQuest will assume pos-unate behavior for these edges in the clock network.
@@ -772,39 +774,41 @@ Info (332097): The following timing edges are non-unate.  TimeQuest will assume 
     Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama8~MEMORYREGOUT
     Info (332098): From: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~CLKMUX_0  to: fir_altera_wrapper:fir_altera_wrapper_inst|FIR_90TAPS:fir_90taps_inst|FIR_90TAPS_0002:fir_90taps_inst|FIR_90TAPS_0002_ast:FIR_90TAPS_0002_ast_inst|FIR_90TAPS_0002_rtl_core:\real_passthrough:hpfircore_core|altera_syncram:u0_m0_wo0_wi0_r0_delayr32_mem_dmem|altera_syncram_llu3:auto_generated|altsyncram_opb4:altsyncram1|lutrama9~MEMORYREGOUT
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
-Info (332146): Worst-case setup slack is 1.205
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the TimeQuest Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.154
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.205               0.000 sysclk 
-Info (332146): Worst-case hold slack is 0.040
+    Info (332119):    -0.154            -374.206 sysclk 
+Info (332146): Worst-case hold slack is 0.052
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.040               0.000 sysclk 
-Info (332146): Worst-case recovery slack is 2.552
+    Info (332119):     0.052               0.000 sysclk 
+Info (332146): Worst-case recovery slack is 0.044
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     2.552               0.000 sysclk 
-Info (332146): Worst-case removal slack is 0.748
+    Info (332119):     0.044               0.000 sysclk 
+Info (332146): Worst-case removal slack is 0.757
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.748               0.000 sysclk 
-Info (332146): Worst-case minimum pulse width slack is 1.493
+    Info (332119):     0.757               0.000 sysclk 
+Info (332146): Worst-case minimum pulse width slack is -0.202
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.493               0.000 sysclk 
+    Info (332119):    -0.202           -1279.468 sysclk 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 1
     Info (332114): Shortest Synchronizer Chain: 3 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 12.616 ns
+    Info (332114): Worst Case Available Settling Time: 4.567 ns
     Info (332114): 
-Info (332101): Design is fully constrained for setup requirements
-Info (332101): Design is fully constrained for hold requirements
-Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 1557 megabytes
-    Info: Processing ended: Thu Aug 04 19:37:31 2016
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:00:18
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 1426 megabytes
+    Info: Processing ended: Thu Aug 04 20:15:00 2016
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:17
 
 
